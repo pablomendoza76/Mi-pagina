@@ -1,0 +1,110 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f5f7; /* Fondo claro similar a iOS */
+    color: #333; /* Color de texto oscuro para legibilidad */
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Aumentado el padding para un look más espacioso */
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombras más profundas para efecto iOS */
+}
+
+.navbar .logo {
+    font-size: 48px; /* Tamaño de texto incrementado al doble */
+    font-weight: 700;
+    color: #007aff; /* Azul iOS */
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 30px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 36px; /* Aumentado al doble */
+    color: #007aff;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu li a:hover {
+    color: #005bb5; /* Efecto hover estilo iOS */
+}
+
+/* Estilos para la sección del parque */
+.park-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 30px;
+    gap: 2cm; /* Separación máxima de 2 cm entre las columnas */
+}
+
+.left-side, .right-side, .center {
+    flex: 1;
+    text-align: center;
+}
+
+#park-title {
+    font-size: 48px; /* Tamaño de texto duplicado */
+    font-weight: 700;
+    margin-bottom: 0.5cm; /* Separación de 0.5 cm con la imagen */
+    color: #000;
+}
+
+#park-image {
+    width: 700px; /* Tamaño ajustado a 700px */
+    height: 700px;
+    border-radius: 20px; /* Bordes redondeados estilo iOS */
+    margin-bottom: 0.5cm; /* Separación de 0.5 cm con el texto */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave estilo iOS */
+}
+
+#park-description {
+    font-size: 32px; /* Tamaño de texto al doble */
+    line-height: 1.8;
+    color: #444; /* Texto ligeramente gris para look suave */
+    margin-top: 0.5cm; /* Separación de 0.5 cm del título o imagen */
+}
+
+/* Estilos para la galería */
+.gallery {
+    margin-top: 40px; /* Aumentada la separación */
+    text-align: center;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.thumbnails img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px; /* Bordes redondeados estilo iOS */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave en miniaturas */
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+}

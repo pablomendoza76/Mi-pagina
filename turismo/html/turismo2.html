@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parques de Loja</title>
+    <link rel="stylesheet" href="../css/texturas2.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Parques de Loja</div>
+            <ul class="menu">
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Parques</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="park-section">
+            <div class="left-side">
+                <h2 id="park-title">Parque Central</h2>
+            </div>
+            <div class="center">
+                <img id="park-image" src="../imge/Parque Central _2.jpg" alt="Parque Central">
+            </div>
+            <div class="right-side">
+                <p id="park-description">
+                    El Parque Central de Loja es un espacio emblemático donde los visitantes pueden disfrutar de áreas verdes, zonas de descanso y eventos culturales. Es un punto de encuentro popular para locales y turistas.
+                    <br><br>
+                    <strong>Ubicación:</strong> Se encuentra en el corazón de la ciudad de Loja, Ecuador, en la Plaza Central, rodeado de edificios históricos.
+                </p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="thumbnails" id="thumbnails">
+                <img src="../imge/diversidad.jpg" alt="Diversidad" onclick="changePark(this, 'Parque de la Diversidad', 'El Parque de la Diversidad es un espacio multicultural dedicado a resaltar la riqueza cultural de Loja. Cuenta con áreas verdes, monumentos y zonas de entretenimiento.\\n\\nUbicación: Se encuentra en el sur de Loja, Ecuador, en la Avenida Pío Jaramillo.')">
+                <img src="../imge/20240936.jpg" alt="Parque Jipiro" onclick="changePark(this, 'Parque Jipiro', 'El Parque Jipiro es un parque recreativo y cultural muy popular en Loja, conocido por sus réplicas de monumentos arquitectónicos internacionales, como la Torre Eiffel, una pagoda china y un templo árabe. Ofrece áreas verdes, lagunas con botes, zonas de juegos para niños, y espacios deportivos. Es ideal para paseos familiares, actividades al aire libre, y eventos culturales.\\n\\nUbicación: Se encuentra en el norte de la ciudad de Loja, Ecuador, en la Avenida Salvador Bustamante Celi, cerca del río Zamora.')">
+                <img src="../imge/images.jpg" alt="Parque Pucará" onclick="changePark(this, 'Parque Pucará', 'El Parque Pucará es conocido por sus vistas panorámicas y sus áreas verdes. Es un lugar perfecto para caminatas y actividades recreativas al aire libre, y ofrece miradores espectaculares de la ciudad de Loja.\\n\\nUbicación: Se encuentra en una colina al noreste de Loja, Ecuador, accesible desde la Avenida Pío Jaramillo.')">
+                <img src="../imge/images (1).jpg" alt="Parque Bolívar" onclick="changePark(this, 'Parque Bolívar', 'El Parque Bolívar es un sitio histórico y cultural, ideal para paseos tranquilos y actividades culturales. Cuenta con monumentos, jardines y áreas de recreación.\\n\\nUbicación: Situado en el centro de Loja, Ecuador, en la Avenida Bolívar, cerca de la Iglesia San Sebastián.')">
+                <img src="../imge/parque-eolico-villanaco_loja_VI37136_MG1702982.jpg" alt="Parque Eólico Villonaco" onclick="changePark(this, 'Parque Eólico Villonaco', 'El Parque Eólico Villonaco es un destino turístico único que ofrece impresionantes vistas panorámicas de Loja desde lo alto del cerro Villonaco, además de ser un símbolo de energía renovable en la región.\\n\\nUbicación: Se encuentra en el cerro Villonaco, al oeste de la ciudad de Loja, Ecuador.')">
+                <img src="../imge/Parque-Lineal-La-Tebaida-turismo-en-ecuador-ecuador-turismo-Loja-Ecuador-Lives.webp" alt="Parque Lineal La Tebaida" onclick="changePark(this, 'Parque Lineal La Tebaida', 'El Parque Lineal La Tebaida es un extenso parque verde que sigue el curso del río Malacatos. Es ideal para realizar deportes, caminatas, y disfrutar de la naturaleza en un entorno urbano.\\n\\nUbicación: Se encuentra en la zona sur de Loja, Ecuador, a lo largo del río Malacatos.')">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let currentImage = document.getElementById("park-image");
+
+        function changePark(selectedImage, title, description) {
+            // Guardar la información actual de la imagen principal
+            const mainImageSrc = currentImage.src;
+            const mainImageAlt = currentImage.alt;
+            
+            // Actualizar la imagen principal con los datos de la imagen seleccionada
+            currentImage.src = selectedImage.src;
+            currentImage.alt = selectedImage.alt;
+            document.getElementById("park-title").innerText = title;
+            document.getElementById("park-description").innerText = description;
+
+            // Intercambiar la imagen seleccionada con la imagen principal
+            selectedImage.src = mainImageSrc;
+            selectedImage.alt = mainImageAlt;
+        }
+    </script>
+</body>
+</html>
